@@ -1,5 +1,5 @@
 // Coding Challenge #1
-
+/*
 const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
@@ -30,5 +30,5 @@ if (BMIMark < BMIJohn) {
 } else {
     console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`)
 }
-
+*/
 // Coding Challenge #3

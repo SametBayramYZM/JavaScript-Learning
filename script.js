@@ -165,3 +165,74 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
+
+// type conversion
+const inputYear = '1999';
+console.log(Number(inputYear), inputYear); // String olan 1999 sayıya dönüştürülür. Sonraki satırlara etki etmez.
+console.log(inputYear + 25); // 199925. 1999 aslında string bir ifade.
+console.log(Number(inputYear) + 25); // 1999+25
+
+console.log(Number('Samet')); // Sayı olmaan string öğeler NaN olarak çevirilir.
+console.log(typeof NaN); // NaN = number
+
+console.log(String(23), 23); // 23 Artık string bir ifadedir ve 4 işlem yapılamaz.
+
+// type coercion
+console.log('I am ' + 24 + ' years old');
+console.log('I am ' + String(24) + ' years old');
+console.log('23' - '10' - 3); // 10, JavaScript Otomatik dönüşümleri yapar. + işaretinde String kabul eder - işaretinde number
+console.log('23' * '2'); // aynı şekilde bölme ve çarpma işleminde de sayı olan string ifade sayı olarak kabul edilir.
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n); // 10, çünkü toplama işleminde string sayı ile normal sayı yan yana yazılır.
+
+
+// 5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Samet'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+const money = 0.01;
+if (money) {
+    console.log("don't spend it all ;)");
+} else {
+    console.log('You should get a job!');
+}
+
+let height = 1.87
+if (height) {
+    console.log('YAY! Heighy is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
+
+
+const age = '18';
+
+if (age === 18) console.log('You should became an adult. (Strict)');
+if (age == 18) console.log('You should became an adult. (loose)');
+// == Tip zorlaması yapar ve içerideki ifadeye bakar, === tip zorlaması yapmaz.
+
+const favourite = prompt("What's your favourite number?");
+console.log(favourite);
+console.log(typeof (favourite));//String bir ifadedir.
+
+/* if (favorite == 23) { // '23' == 23
+    console.log('Cool! 23 is an amazing number!');
+} 
+// === is blocked this javascript version. Only == working.
+if (favourite == 23) { // 23 === 23
+    console.log('Cool! 23 is an amazing number!');
+} else if (favourite == 7) {
+    console.log('7 is also cool number.');
+} else if (favourite == 9) {
+    console.log('9 is also a cool number.');
+} else {
+    console.log('Number is not 23 or 7.');
+}
+
+if (favourite != 23) console.log('Why not 23?'); // also !== not working 2024

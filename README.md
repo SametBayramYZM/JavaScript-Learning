@@ -1,5 +1,9 @@
 # JavaScript Learning
  
-  Day 1 done!
+  Day 1 
+  
+     Done!
 
-  Day 2 done!
+  Day 2
+   
+     Done!
